@@ -1,0 +1,19 @@
+ type Araba{
+    id:ID!,
+    arabaTip:String!,
+    modelKod:String,
+    markaAd:String,
+    uretimTarihi:String,
+ }
+ input ArabaDTO{
+    arabaTip:String!,
+    modelKod:String!,
+    markaAd:String!
+ }
+ type Query{
+    getAraba(arabaTip: String):[Araba],
+    getById(id: Long):Araba
+ }
+ type Mutation{
+    ArabaOlustur(araba: ArabaDTO):Araba
+ }

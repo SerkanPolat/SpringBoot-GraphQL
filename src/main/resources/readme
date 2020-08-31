@@ -1,0 +1,24 @@
+localhost:PORT/graphql //Isteklerin yapildigi adres
+
+localhost:PORT/graphiql //Dependeciesde tanimlanan graphiql sundugu arayuz buradan get post
+islemleri yapilabilir.
+
+Get Post ornekler:
+
+
+mutation{
+  ArabaOlustur(araba:{arabaTip:"test",modelKod:"2019",markaAd:"Reno"}){
+    markaAd
+  }
+}
+query{
+  getAraba(arabaTip:"test"){
+    uretimTarihi
+  }
+}
+query{
+  getAraba(arabaTip:"test"){
+    modelKod,
+    id
+  }
+}
